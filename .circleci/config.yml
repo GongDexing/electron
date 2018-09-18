@@ -363,10 +363,10 @@ steps-tests: &steps-tests
     - <<: *step-setup-for-headless-testing
     - <<: *step-install-nodejs-on-mac
 
-    - <<: *step-verify-ffmpeg
-
     - <<: *step-electron-tests-run
     - <<: *step-electron-tests-store-results
+
+    - <<: *step-verify-ffmpeg
 
 # Mac build are different in a few ways:
 # 1. We can't use save_cache/restore_cache on Mac,
